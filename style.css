@@ -1,0 +1,139 @@
+html {
+  font-family: rubik;
+  font-size: 62, 5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: 1;
+  height: 100%;
+}
+
+.header-input {
+  margin-top: 3rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 20rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h2 {
+  color: #fff;
+}
+.input-ip {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 9px 0 0 9px;
+  border: none;
+}
+.input {
+  width: 100%;
+  display: flex;
+}
+
+.input-ip:focus {
+  outline: none;
+}
+
+.btn-search {
+  border-radius: 0px 9px 9px 0px;
+  border: none;
+  background-color: rgb(37, 37, 37);
+  padding: 0.6rem;
+}
+
+.section-info {
+  z-index: 100;
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-top: 3rem;
+  border-radius: 9px;
+  transform: translateX(25%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+
+  position: absolute;
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+
+  padding: 0.7rem;
+}
+
+.info-main {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.info-box h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: rgb(206, 206, 206);
+  font-size: 0.9rem;
+}
+
+.line {
+  height: 4rem;
+  width: 2px;
+  background-color: rgb(210, 210, 210);
+}
+
+.map-container {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  margin-top: 9rem;
+  z-index: 2;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .section-info {
+    flex-direction: column;
+    width: 40%;
+    transform: translateX(75%);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-box {
+    align-items: center;
+  }
+  .map-container {
+    height: 100vh;
+  }
+
+  .line {
+    transform: rotate(90deg);
+  }
+}

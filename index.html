@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>IP Address Tracker</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <script defer src="./app.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="header-img" src="images/pattern-bg.png" alt="" />
+      <div class="header-input">
+        <h2>IP Adress Tracker</h2>
+        <div class="input">
+          <input
+            id="ip-adress"
+            placeholder="Search for any IP Adress or domain"
+            type="text"
+            class="input-ip"
+          />
+          <button id="btn-search" class="btn-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="3"
+                d="M2 1l6 6-6 6"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-info">
+      <div class="ip-adress-box info-box">
+        <h4>IP Adress</h4>
+        <span id="ip-info" class="ip-adress info-main">192.168.182.10</span>
+      </div>
+      <span class="line"></span>
+      <div class="location-box info-box">
+        <h4>Location</h4>
+        <span id="location-info" class="location info-main">Vienna</span>
+      </div>
+      <span class="line"></span>
+      <div class="timezone-box info-box">
+        <h4>Time-Zone</h4>
+        <span id="timezone" class="timezone info-main">GMT+1</span>
+      </div>
+      <span class="line"></span>
+      <div class="isp-box info-box">
+        <h4>isp</h4>
+        <span id="isp" class="ips info-main">Space Link</span>
+      </div>
+    </section>
+    <section id="map-container" class="map-container"></section>
+  </body>
+</html>
